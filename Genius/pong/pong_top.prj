@@ -1,8 +1,0 @@
-vhdl work "vgacore_multi.vhd"
-vhdl work "testram.vhd"
-verilog work "ps2_cntrl.v"
-vhdl work "vga_interface.vhd"
-verilog work "read_ps2.v"
-vhdl work "pong_cntrl.vhd"
-verilog work "game_title.v"
-verilog work "pong_top.vf"

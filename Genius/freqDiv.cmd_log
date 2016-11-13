@@ -1,1 +1,0 @@
-vhdtdtfi -prj Genius -o C:/Users/Kaue/Dropbox/VHDL/VHDL_GENIUS/Genius/freqDiv.vhi -module freqDiv -template D:/XilincISe/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib GENIUS CLOCK_1HZ.vhd 

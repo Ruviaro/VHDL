@@ -34,6 +34,7 @@ begin
 ---- Processo de divisor de clock 1Hz.
 PROCESS_DIV_CLOCK: PROCESS(clk)
 	BEGIN
+	
 		if rising_edge(clk)THEN 	
 			-- Geração do clock de 1Hz a partir do clock de 50MHz			
 			--Incrementa o divisor do clock de 1Hz
