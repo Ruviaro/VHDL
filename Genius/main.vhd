@@ -7,7 +7,7 @@ USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 entity main is
 	generic (  timeout		: STD_LOGIC_VECTOR (26 downto 0):= "010111110101111000010000000"; --50_000_000); -- 1seg
 				  debounceTimer: STD_LOGIC_VECTOR (26 downto 0):= "000000000001100001101010000");
-		Port ( --clk					: IN  STD_LOGIC;
+		Port ( clk					: IN  STD_LOGIC;
 				 Entrada 			: IN  STD_LOGIC_VECTOR (3 downto 0):= (OTHERS => '1');
 				 led					: OUT STD_LOGIC_VECTOR (7 downto 0):= (OTHERS => '0')
 				 );
@@ -17,7 +17,7 @@ architecture Behavioral of main is
 
 -- Sinais utilizados na divisão do clock.	
 	signal 	timer_debounce 			: STD_LOGIC_VECTOR (26 downto 0):= (OTHERS => '0');
---	signal	div_clk_1Hz					:STD_LOGIC_VECTOR (26 downto 0):= (OTHERS => '0');
+	signal	div_clk_1Hz					:STD_LOGIC_VECTOR (26 downto 0):= (OTHERS => '0');
 
 	
 	signal	signal_led					: STD_LOGIC_VECTOR (3 downto 0):= (OTHERS => '0');
@@ -26,39 +26,28 @@ architecture Behavioral of main is
 -- ENUM para os estados do debounce
 	TYPE DEBOUNCESTATES IS ( UP, DOWN, PRESSED, RELEASED);
 	SIGNAL debounce : DEBOUNCESTATES:=DOWN;
-	
-	-- componente frequencia de 1hz
-	component freq_1hz is
-		Port ( 	input_clk		: IN  STD_LOGIC;
-					clk_1hz : out  STD_LOGIC);
-signal freq1Hz : STD_LOGIC;
-
 
 
 begin
 
 ----------------------------------------------------------------------
 ---- Processo de divisor de clock 1Hz.
-PROCESS_DIV_CLOCK: PROCESS(freq_1hz)
+PROCESS_DIV_CLOCK: PROCESS(clk)
 	BEGIN
---		if rising_edge(clk)THEN 	
---			-- Geração do clock de 1Hz a partir do clock de 50MHz			
---			--Incrementa o divisor do clock de 1Hz
---			div_clk_1Hz <= div_clk_1Hz + 1;
---			IF div_clk_1Hz = timeout THEN 
---				-- Alterna o sinal, gerando o clock			
---				-- Zera o contador				
---				div_clk_1Hz <= (OTHERS => '0');
---				signal_led <= signal_led + '1';	
---				led(3 downto 0)	<= signal_led;				
---			end if;
---			
---		END IF;
+		if rising_edge(clk)THEN 	
+			-- Geração do clock de 1Hz a partir do clock de 50MHz			
+			--Incrementa o divisor do clock de 1Hz
+			div_clk_1Hz <= div_clk_1Hz + 1;
+			IF div_clk_1Hz = timeout THEN 
+				-- Alterna o sinal, gerando o clock			
+				-- Zera o contador				
+				div_clk_1Hz <= (OTHERS => '0');
+				signal_led <= signal_led + '1';	
+				led(3 downto 0)	<= signal_led;				
+			end if;
+			
+		END IF;
 
-if rising_edge(freq1Hz)THEN 
-signal_led <= signal_led + '1';	
-led(3 downto 0)	<= signal_led;
-end if;
 END PROCESS;
 
 ----------------------------------------------------------------------
@@ -102,10 +91,6 @@ PROCESS_TIMER: PROCESS(clk, Entrada)
 			END IF;
 		END IF;		
 END PROCESS;
-
-
-freq_1hz: CLOCK_1HZ port map (	input_clk => clk,
-                                 clk_1hz   => freq1Hz);
 
 end Behavioral;
 

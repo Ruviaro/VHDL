@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=C:\Users\Kaue\Dropbox\Lab4\Genius\Genius\main.ncd
-OUTFILE=C:\Users\Kaue\Dropbox\Lab4\Genius\Genius\main.bit
+INFILE=C:\Users\Kaue\Dropbox\VHDL\VHDL_GENIUS\Genius\main.ncd
+OUTFILE=C:\Users\Kaue\Dropbox\VHDL\VHDL_GENIUS\Genius\main.bit
 FAMILY=Spartan3E
 PART=xc3s1200e-5fg320
-WORKINGDIR=C:\Users\Kaue\Dropbox\Lab4\Genius\Genius
+WORKINGDIR=C:\Users\Kaue\Dropbox\VHDL\VHDL_GENIUS\Genius
 LICENSE=WebPack
 USER_INFO=211075059_0_0_830

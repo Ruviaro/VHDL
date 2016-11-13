@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-11-13T10:40:29</DateModified>
+  <DateModified>2016-11-13T14:31:03</DateModified>
   <ModuleName>main</ModuleName>
-  <SummaryTimeStamp>2016-11-12T19:47:21</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Kaue/Dropbox/VHDL/Genius/iseconfig/main.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Kaue/Dropbox/VHDL/Genius\</ImplementationReportsDirectory>
+  <SummaryTimeStamp>2016-11-13T13:58:15</SummaryTimeStamp>
+  <SavedFilePath>C:/Users/Kaue/Dropbox/VHDL/VHDL_GENIUS/Genius/iseconfig/main.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/Kaue/Dropbox/VHDL/VHDL_GENIUS/Genius\</ImplementationReportsDirectory>
   <DateInitialized>2016-11-12T14:10:33</DateInitialized>
   <EnableMessageFiltering>true</EnableMessageFiltering>
  </header>
