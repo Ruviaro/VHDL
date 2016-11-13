@@ -1,2 +1,5 @@
 # VHDL_GENIUS
-# VHDL
+# VHDL v0.1
+# VHDL v0.2
+# VHDL v0.2.1
+
