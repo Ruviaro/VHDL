@@ -14,20 +14,19 @@ entity main is
 end main;
 
 architecture Behavioral of main is
-
+---------------------------------------------------------------------------------------
 -- Sinais utilizados na divisão do clock.	
+
 	signal 	timer_debounce 			: STD_LOGIC_VECTOR (26 downto 0):= (OTHERS => '0');
 	signal	div_clk_1Hz					:STD_LOGIC_VECTOR (26 downto 0):= (OTHERS => '0');
-
-	
+---------------------------------------------------------------------------------------
+-- Sinal usado para controle dos leds
 	signal	signal_led					: STD_LOGIC_VECTOR (3 downto 0):= (OTHERS => '0');
 	
-
+---------------------------------------------------------------------------------------
 -- ENUM para os estados do debounce
 	TYPE DEBOUNCESTATES IS ( UP, DOWN, PRESSED, RELEASED);
 	SIGNAL debounce : DEBOUNCESTATES:=DOWN;
-
-
 begin
 
 ----------------------------------------------------------------------
