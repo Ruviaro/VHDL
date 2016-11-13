@@ -1,0 +1,12 @@
+MO PS2_CTRL NULL ps2_cntrl.v vlg15/_p_s2___c_t_r_l.bin 1478985565
+MO game_title NULL game_title.v vlg13/game__title.bin 1478985565
+AR cntrl static_display C:/Users/Kaue/Dropbox/Lab4/Genius/Genius/pong/pong_cntrl.vhd sub00/vhpl05 1478985570
+EN cntrl NULL C:/Users/Kaue/Dropbox/Lab4/Genius/Genius/pong/pong_cntrl.vhd sub00/vhpl04 1478985569
+AR vga_int behavioral C:/Users/Kaue/Dropbox/Lab4/Genius/Genius/pong/vga_interface.vhd sub00/vhpl07 1478985572
+EN vga_int NULL C:/Users/Kaue/Dropbox/Lab4/Genius/Genius/pong/vga_interface.vhd sub00/vhpl06 1478985571
+MO pong_top NULL pong_top.vf vlg26/pong__top.bin 1478985565
+MO read_ps2 NULL read_ps2.v vlg14/read__ps2.bin 1478985565
+AR vgacore behavioral C:/Users/Kaue/Dropbox/Lab4/Genius/Genius/pong/vgacore_multi.vhd sub00/vhpl01 1478985566
+EN testram NULL C:/Users/Kaue/Dropbox/Lab4/Genius/Genius/pong/testram.vhd sub00/vhpl02 1478985567
+EN vgacore NULL C:/Users/Kaue/Dropbox/Lab4/Genius/Genius/pong/vgacore_multi.vhd sub00/vhpl00 1478985565
+AR testram behavioral C:/Users/Kaue/Dropbox/Lab4/Genius/Genius/pong/testram.vhd sub00/vhpl03 1478985568

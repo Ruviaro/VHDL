@@ -1,0 +1,4 @@
+vhdl work "C:\Users\Kaue\Dropbox\Lab4\Genius\Genius\pong\vgacore_multi.vhd"
+vhdl work "C:\Users\Kaue\Dropbox\Lab4\Genius\Genius\pong\testram.vhd"
+vhdl work "C:\Users\Kaue\Dropbox\Lab4\Genius\Genius\pong\vga_interface.vhd"
+vhdl work "C:\Users\Kaue\Dropbox\Lab4\Genius\Genius\pong\pong_cntrl.vhd"

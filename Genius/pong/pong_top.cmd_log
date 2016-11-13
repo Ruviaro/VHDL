@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn "C:/Users/Kaue/Dropbox/Lab4/Genius/Genius/pong/pong_top.xst" -ofn "C:/Users/Kaue/Dropbox/Lab4/Genius/Genius/pong/pong_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s1200e-ft256-4 pong_top.ngc pong_top.ngd  
+map -intstyle ise -p xc3s1200e-ft256-4 -cm area -ir off -pr off -c 100 -o pong_top_map.ncd pong_top.ngd pong_top.pcf 
+map -intstyle ise -p xc3s1200e-ft256-4 -cm area -ir off -pr off -c 100 -o pong_top_map.ncd pong_top.ngd pong_top.pcf 
+xst -intstyle ise -ifn "C:/Users/Kaue/Dropbox/Lab4/Genius/Genius/pong/pong_top.xst" -ofn "C:/Users/Kaue/Dropbox/Lab4/Genius/Genius/pong/pong_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s1200e-ft256-4 pong_top.ngc pong_top.ngd  
+map -intstyle ise -p xc3s1200e-ft256-4 -cm area -ir off -pr off -c 100 -o pong_top_map.ncd pong_top.ngd pong_top.pcf 

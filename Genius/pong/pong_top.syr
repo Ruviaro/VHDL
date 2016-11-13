@@ -1,0 +1,924 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: pong_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "pong_top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "pong_top"
+Output Format                      : NGC
+Target Device                      : xc3s1200e-4-ft256
+
+---- Source Options
+Top Module Name                    : pong_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Kaue/Dropbox/Lab4/Genius/Genius/pong/vgacore_multi.vhd" in Library work.
+Architecture behavioral of Entity vgacore is up to date.
+Compiling vhdl file "C:/Users/Kaue/Dropbox/Lab4/Genius/Genius/pong/testram.vhd" in Library work.
+Architecture behavioral of Entity testram is up to date.
+Compiling vhdl file "C:/Users/Kaue/Dropbox/Lab4/Genius/Genius/pong/pong_cntrl.vhd" in Library work.
+Architecture static_display of Entity cntrl is up to date.
+Compiling vhdl file "C:/Users/Kaue/Dropbox/Lab4/Genius/Genius/pong/vga_interface.vhd" in Library work.
+Architecture behavioral of Entity vga_int is up to date.
+Compiling verilog file "ps2_cntrl.v" in library work
+Compiling verilog file "read_ps2.v" in library work
+Module <PS2_CTRL> compiled
+Compiling verilog file "game_title.v" in library work
+Module <read_ps2> compiled
+Compiling verilog file "pong_top.vf" in library work
+Module <game_title> compiled
+Module <pong_top> compiled
+No errors in compilation
+Analysis of file <"pong_top.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <pong_top> in library <work>.
+
+Analyzing hierarchy for entity <cntrl> in library <work> (architecture <static_display>).
+
+Analyzing hierarchy for module <read_ps2> in library <work>.
+
+Analyzing hierarchy for module <game_title> in library <work>.
+
+Analyzing hierarchy for entity <vga_int> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <vgacore> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <testram> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for module <PS2_CTRL> in library <work> with parameters.
+	idle = "00"
+	shifting = "11"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <pong_top>.
+Module <pong_top> is correct for synthesis.
+ 
+    Set user-defined property "LOC =  l14" for signal <btn3> in unit <pong_top>.
+    Set user-defined property "LOC =  t9" for signal <clk_ic4> in unit <pong_top>.
+    Set user-defined property "LOC =  m16" for signal <ps2c> in unit <pong_top>.
+    Set user-defined property "LOC =  m15" for signal <ps2d> in unit <pong_top>.
+    Set user-defined property "LOC =  e13 f14 g14 d14" for signal <an> in unit <pong_top>.
+    Set user-defined property "LOC =  p11 P4 E4 P16 e16 k14 k15 J15" for signal <ld> in unit <pong_top>.
+    Set user-defined property "LOC =  e14" for signal <seg_a> in unit <pong_top>.
+    Set user-defined property "LOC =  g13" for signal <seg_b> in unit <pong_top>.
+    Set user-defined property "LOC =  n15" for signal <seg_c> in unit <pong_top>.
+    Set user-defined property "LOC =  p15" for signal <seg_d> in unit <pong_top>.
+    Set user-defined property "LOC =  p16" for signal <seg_dp> in unit <pong_top>.
+    Set user-defined property "LOC =  r16" for signal <seg_e> in unit <pong_top>.
+    Set user-defined property "LOC =  f13" for signal <seg_f> in unit <pong_top>.
+    Set user-defined property "LOC =  n16" for signal <seg_g> in unit <pong_top>.
+    Set user-defined property "LOC =  r11" for signal <vga_blue> in unit <pong_top>.
+    Set user-defined property "LOC =  t12" for signal <vga_green> in unit <pong_top>.
+    Set user-defined property "LOC =  r9" for signal <vga_hs> in unit <pong_top>.
+    Set user-defined property "LOC =  r12" for signal <vga_red> in unit <pong_top>.
+    Set user-defined property "LOC =  t10" for signal <vga_vs> in unit <pong_top>.
+Analyzing Entity <cntrl> in library <work> (Architecture <static_display>).
+Entity <cntrl> analyzed. Unit <cntrl> generated.
+
+Analyzing Entity <vgacore> in library <work> (Architecture <behavioral>).
+Entity <vgacore> analyzed. Unit <vgacore> generated.
+
+Analyzing Entity <testram> in library <work> (Architecture <behavioral>).
+WARNING:Xst:790 - "C:/Users/Kaue/Dropbox/Lab4/Genius/Genius/pong/testram.vhd" line 139: Index value(s) does not match array range, simulation mismatch.
+Entity <testram> analyzed. Unit <testram> generated.
+
+Analyzing module <read_ps2> in library <work>.
+Module <read_ps2> is correct for synthesis.
+ 
+Analyzing module <PS2_CTRL> in library <work>.
+	idle = 2'b00
+	shifting = 2'b11
+Module <PS2_CTRL> is correct for synthesis.
+ 
+Analyzing module <game_title> in library <work>.
+Module <game_title> is correct for synthesis.
+ 
+Analyzing Entity <vga_int> in library <work> (Architecture <behavioral>).
+Entity <vga_int> analyzed. Unit <vga_int> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <game_title>.
+    Related source file is "game_title.v".
+    Found 4x12-bit ROM for signal <COND_3$rom0000>.
+    Found 4-bit register for signal <an>.
+    Found 8-bit register for signal <seven_seg>.
+    Found 10-bit up counter for signal <cnt>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 Counter(s).
+	inferred  12 D-type flip-flop(s).
+Unit <game_title> synthesized.
+
+
+Synthesizing Unit <vga_int>.
+    Related source file is "C:/Users/Kaue/Dropbox/Lab4/Genius/Genius/pong/vga_interface.vhd".
+    Found 4x3-bit ROM for signal <COLOR$rom0000>.
+    Found 1-bit register for signal <VSYNCH_OUT>.
+    Found 1-bit register for signal <BLUE>.
+    Found 1-bit register for signal <GREEN>.
+    Found 1-bit register for signal <HSYNCH_OUT>.
+    Found 1-bit register for signal <RED>.
+    Found 1-bit register for signal <HSYNCH_PIPE>.
+    Found 1-bit register for signal <VSYNCH_PIPE>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   7 D-type flip-flop(s).
+Unit <vga_int> synthesized.
+
+
+Synthesizing Unit <vgacore>.
+    Related source file is "C:/Users/Kaue/Dropbox/Lab4/Genius/Genius/pong/vgacore_multi.vhd".
+WARNING:Xst:646 - Signal <TEMP_PIXEL<2:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <TEMP_LINE<2:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_0> for signal <Horizontal_State>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 13                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 7                                              |
+    | Clock              | CLK                       (rising_edge)        |
+    | Reset              | RESET                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 000                                            |
+    | Power Up State     | 000                                            |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_1> for signal <Vertical_State>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 13                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 6                                              |
+    | Clock              | VCLK                      (rising_edge)        |
+    | Reset              | RESET                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 000                                            |
+    | Power Up State     | 000                                            |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 6-bit register for signal <LINE>.
+    Found 1-bit register for signal <VSYNCH>.
+    Found 1-bit register for signal <HSYNCH>.
+    Found 1-bit register for signal <HBLANK>.
+    Found 7-bit register for signal <PIXEL>.
+    Found 1-bit register for signal <COUNTER_RESET>.
+    Found 10-bit up counter for signal <HCOUNTER>.
+    Found 9-bit register for signal <TEMP_LINE>.
+    Found 10-bit register for signal <TEMP_PIXEL>.
+    Found 1-bit register for signal <VCLK>.
+    Found 10-bit up counter for signal <VCOUNTER>.
+    Found 1-bit register for signal <VERTICAL_COUNTER_RESET>.
+    Summary:
+	inferred   2 Finite State Machine(s).
+	inferred   2 Counter(s).
+	inferred  38 D-type flip-flop(s).
+Unit <vgacore> synthesized.
+
+
+Synthesizing Unit <testram>.
+    Related source file is "C:/Users/Kaue/Dropbox/Lab4/Genius/Genius/pong/testram.vhd".
+    Found 80x4-bit ROM for signal <data$rom0000> created at line 139.
+    Summary:
+	inferred   1 ROM(s).
+Unit <testram> synthesized.
+
+
+Synthesizing Unit <PS2_CTRL>.
+    Related source file is "ps2_cntrl.v".
+    Found finite state machine <FSM_2> for signal <scan_state>.
+    -----------------------------------------------------------------------
+    | States             | 2                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 2                                              |
+    | Clock              | Clk                       (rising_edge)        |
+    | Clock enable       | scan_state$and0000        (positive)           |
+    | Reset              | Reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <trigger>.
+    Found 8-bit register for signal <Scan_Code>.
+    Found 1-bit register for signal <scan_ready>.
+    Found 4-bit register for signal <bit_count>.
+    Found 4-bit adder for signal <bit_count$addsub0000> created at line 134.
+    Found 2-bit register for signal <clear_reg>.
+    Found 2-bit adder for signal <clear_reg$addsub0000> created at line 102.
+    Found 2-bit comparator greatequal for signal <clear_reg$cmp_ge0000> created at line 103.
+    Found 3-bit up counter for signal <clk_high_filter>.
+    Found 3-bit up counter for signal <clk_low_filter>.
+    Found 1-bit register for signal <filter_clk_en>.
+    Found 9-bit register for signal <s_reg>.
+    Found 1-bit register for signal <scan_en>.
+    Found 4-bit comparator greatequal for signal <scan_state$cmp_ge0000> created at line 141.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   2 Counter(s).
+	inferred  27 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+Unit <PS2_CTRL> synthesized.
+
+
+Synthesizing Unit <cntrl>.
+    Related source file is "C:/Users/Kaue/Dropbox/Lab4/Genius/Genius/pong/pong_cntrl.vhd".
+    Register <VSYNCH> equivalent to <VCLK> has been removed
+    Found 1-bit register for signal <HSYNCH>.
+    Found 2-bit register for signal <COLOR>.
+    Found 6-bit adder for signal <$add0000> created at line 321.
+    Found 6-bit adder for signal <$add0001> created at line 337.
+    Found 6-bit adder for signal <$add0002> created at line 342.
+    Found 6-bit adder for signal <$add0003> created at line 389.
+    Found 6-bit adder for signal <$add0004> created at line 404.
+    Found 6-bit adder for signal <$add0005> created at line 404.
+    Found 6-bit subtractor for signal <$sub0000> created at line 321.
+    Found 7-bit updown counter for signal <ball_x>.
+    Found 1-bit register for signal <ball_xdir>.
+    Found 7-bit comparator greatequal for signal <ball_xdir$cmp_ge0000> created at line 337.
+    Found 7-bit comparator greatequal for signal <ball_xdir$cmp_ge0001> created at line 321.
+    Found 7-bit comparator greatequal for signal <ball_xdir$cmp_ge0002> created at line 389.
+    Found 7-bit comparator greatequal for signal <ball_xdir$cmp_ge0003> created at line 404.
+    Found 7-bit comparator greatequal for signal <ball_xdir$cmp_ge0004> created at line 424.
+    Found 7-bit comparator greater for signal <ball_xdir$cmp_gt0000> created at line 342.
+    Found 7-bit comparator lessequal for signal <ball_xdir$cmp_le0000> created at line 404.
+    Found 7-bit comparator less for signal <ball_xdir$cmp_lt0000> created at line 342.
+    Found 7-bit comparator less for signal <ball_xdir$cmp_lt0001> created at line 337.
+    Found 7-bit comparator less for signal <ball_xdir$cmp_lt0002> created at line 321.
+    Found 7-bit comparator less for signal <ball_xdir$cmp_lt0003> created at line 389.
+    Found 7-bit comparator less for signal <ball_xdir$cmp_lt0004> created at line 424.
+    Found 6-bit register for signal <ball_y>.
+    Found 6-bit comparator greatequal for signal <ball_y$cmp_ge0000> created at line 455.
+    Found 6-bit comparator lessequal for signal <ball_y$cmp_le0000> created at line 449.
+    Found 6-bit addsub for signal <ball_y$share0000>.
+    Found 1-bit register for signal <ball_ydir>.
+    Found 6-bit comparator greater for signal <ball_ydir$cmp_gt0000> created at line 449.
+    Found 6-bit comparator less for signal <ball_ydir$cmp_lt0000> created at line 455.
+    Found 2-bit register for signal <ball_yrate>.
+    Found 2-bit subtractor for signal <ball_yrate$addsub0000> created at line 326.
+    Found 2-bit adder for signal <ball_yrate$addsub0001> created at line 335.
+    Found 2-bit comparator greater for signal <ball_yrate$cmp_gt0000> created at line 325.
+    Found 7-bit comparator greater for signal <ball_yrate$cmp_gt0001> created at line 404.
+    Found 2-bit comparator less for signal <ball_yrate$cmp_lt0000> created at line 334.
+    Found 7-bit comparator less for signal <ball_yrate$cmp_lt0001> created at line 389.
+    Found 3-bit up counter for signal <delay>.
+    Found 3-bit comparator greatequal for signal <delay$cmp_ge0000> created at line 304.
+    Found 1-bit register for signal <enable>.
+    Found 7-bit comparator greatequal for signal <enable$cmp_ge0000> created at line 321.
+    Found 7-bit comparator lessequal for signal <enable$cmp_le0000> created at line 342.
+    Found 6-bit register for signal <left_y>.
+    Found 4-bit up counter for signal <lscore>.
+    Found 3-bit comparator less for signal <lscore$cmp_lt0000> created at line 304.
+    Found 7-bit comparator equal for signal <next_COLOR$cmp_eq0004> created at line 175.
+    Found 6-bit comparator equal for signal <next_COLOR$cmp_eq0009> created at line 176.
+    Found 7-bit comparator greatequal for signal <next_COLOR$cmp_ge0000> created at line 194.
+    Found 6-bit comparator greatequal for signal <next_COLOR$cmp_ge0001> created at line 169.
+    Found 6-bit comparator greatequal for signal <next_COLOR$cmp_ge0002> created at line 162.
+    Found 8-bit comparator greatequal for signal <next_COLOR$cmp_ge0003> created at line 219.
+    Found 7-bit comparator lessequal for signal <next_COLOR$cmp_le0000> created at line 194.
+    Found 6-bit comparator lessequal for signal <next_COLOR$cmp_le0001> created at line 194.
+    Found 6-bit comparator lessequal for signal <next_COLOR$cmp_le0002> created at line 169.
+    Found 6-bit comparator lessequal for signal <next_COLOR$cmp_le0003> created at line 162.
+    Found 8-bit comparator lessequal for signal <next_COLOR$cmp_le0004> created at line 219.
+    Found 6-bit register for signal <nextleft_y>.
+    Found 6-bit addsub for signal <nextleft_y$addsub0000>.
+    Found 7-bit comparator greater for signal <nextleft_y$cmp_gt0000> created at line 272.
+    Found 7-bit comparator less for signal <nextleft_y$cmp_lt0000> created at line 270.
+    Found 6-bit register for signal <nextright_y>.
+    Found 6-bit addsub for signal <nextright_y$addsub0000>.
+    Found 4-bit register for signal <number_address<6:3>>.
+    Found 6-bit register for signal <right_y>.
+    Found 7-bit comparator greater for signal <right_y$cmp_gt0000> created at line 282.
+    Found 7-bit comparator less for signal <right_y$cmp_lt0000> created at line 280.
+    Found 4-bit up counter for signal <rscore>.
+    Found 1-bit register for signal <VCLK>.
+    Summary:
+	inferred   4 Counter(s).
+	inferred  11 D-type flip-flop(s).
+	inferred  12 Adder/Subtractor(s).
+	inferred  39 Comparator(s).
+Unit <cntrl> synthesized.
+
+
+Synthesizing Unit <read_ps2>.
+    Related source file is "read_ps2.v".
+    Found 2-bit register for signal <right_dir>.
+    Found 2-bit register for signal <left_dir>.
+    Found 1-bit register for signal <serve>.
+    Found 1-bit register for signal <read>.
+    Found 1-bit register for signal <state>.
+    Found 1-bit register for signal <stopkey>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <read_ps2> synthesized.
+
+
+Synthesizing Unit <pong_top>.
+    Related source file is "pong_top.vf".
+Unit <pong_top> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 3
+ 4x12-bit ROM                                          : 1
+ 4x3-bit ROM                                           : 1
+ 80x4-bit ROM                                          : 1
+# Adders/Subtractors                                   : 14
+ 2-bit adder                                           : 2
+ 2-bit subtractor                                      : 1
+ 4-bit adder                                           : 1
+ 6-bit adder                                           : 6
+ 6-bit addsub                                          : 3
+ 6-bit subtractor                                      : 1
+# Counters                                             : 9
+ 10-bit up counter                                     : 3
+ 3-bit up counter                                      : 3
+ 4-bit up counter                                      : 2
+ 7-bit updown counter                                  : 1
+# Registers                                            : 49
+ 1-bit register                                        : 30
+ 10-bit register                                       : 1
+ 2-bit register                                        : 5
+ 4-bit register                                        : 2
+ 6-bit register                                        : 6
+ 7-bit register                                        : 1
+ 8-bit register                                        : 2
+ 9-bit register                                        : 2
+# Comparators                                          : 41
+ 2-bit comparator greatequal                           : 1
+ 2-bit comparator greater                              : 1
+ 2-bit comparator less                                 : 1
+ 3-bit comparator greatequal                           : 1
+ 3-bit comparator less                                 : 1
+ 4-bit comparator greatequal                           : 1
+ 6-bit comparator equal                                : 1
+ 6-bit comparator greatequal                           : 3
+ 6-bit comparator greater                              : 1
+ 6-bit comparator less                                 : 1
+ 6-bit comparator lessequal                            : 4
+ 7-bit comparator equal                                : 1
+ 7-bit comparator greatequal                           : 7
+ 7-bit comparator greater                              : 4
+ 7-bit comparator less                                 : 8
+ 7-bit comparator lessequal                            : 3
+ 8-bit comparator greatequal                           : 1
+ 8-bit comparator lessequal                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_2> for best encoding.
+Optimizing FSM <read_ps2_inst/ps2_ctrl/scan_state/FSM> on signal <scan_state[1:1]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 0
+ 11    | 1
+-------------------
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <cntrl_inst/VGA1/Vertical_State/FSM> on signal <Vertical_State[1:7]> with one-hot encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 0000001
+ 001   | 0001000
+ 010   | 0000100
+ 011   | 0010000
+ 100   | 0000010
+ 101   | 0100000
+ 110   | 1000000
+-------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <cntrl_inst/VGA1/Horizontal_State/FSM> on signal <Horizontal_State[1:7]> with one-hot encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 0000001
+ 001   | 0010000
+ 010   | 0100000
+ 011   | 1000000
+ 100   | 0000010
+ 101   | 0000100
+ 110   | 0001000
+-------------------
+WARNING:Xst:2677 - Node <TEMP_PIXEL_0> of sequential type is unconnected in block <VGA1>.
+WARNING:Xst:2677 - Node <TEMP_PIXEL_1> of sequential type is unconnected in block <VGA1>.
+WARNING:Xst:2677 - Node <TEMP_PIXEL_2> of sequential type is unconnected in block <VGA1>.
+WARNING:Xst:2677 - Node <TEMP_LINE_0> of sequential type is unconnected in block <VGA1>.
+WARNING:Xst:2677 - Node <TEMP_LINE_1> of sequential type is unconnected in block <VGA1>.
+WARNING:Xst:2677 - Node <TEMP_LINE_2> of sequential type is unconnected in block <VGA1>.
+WARNING:Xst:2677 - Node <TEMP_PIXEL_0> of sequential type is unconnected in block <vgacore>.
+WARNING:Xst:2677 - Node <TEMP_PIXEL_1> of sequential type is unconnected in block <vgacore>.
+WARNING:Xst:2677 - Node <TEMP_PIXEL_2> of sequential type is unconnected in block <vgacore>.
+WARNING:Xst:2677 - Node <TEMP_LINE_0> of sequential type is unconnected in block <vgacore>.
+WARNING:Xst:2677 - Node <TEMP_LINE_1> of sequential type is unconnected in block <vgacore>.
+WARNING:Xst:2677 - Node <TEMP_LINE_2> of sequential type is unconnected in block <vgacore>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 3
+# ROMs                                                 : 3
+ 4x12-bit ROM                                          : 1
+ 4x3-bit ROM                                           : 1
+ 80x4-bit ROM                                          : 1
+# Adders/Subtractors                                   : 14
+ 2-bit adder                                           : 2
+ 2-bit subtractor                                      : 1
+ 4-bit adder                                           : 1
+ 6-bit adder                                           : 6
+ 6-bit addsub                                          : 3
+ 6-bit subtractor                                      : 1
+# Counters                                             : 9
+ 10-bit up counter                                     : 3
+ 3-bit up counter                                      : 3
+ 4-bit up counter                                      : 2
+ 7-bit updown counter                                  : 1
+# Registers                                            : 129
+ Flip-Flops                                            : 129
+# Comparators                                          : 41
+ 2-bit comparator greatequal                           : 1
+ 2-bit comparator greater                              : 1
+ 2-bit comparator less                                 : 1
+ 3-bit comparator greatequal                           : 1
+ 3-bit comparator less                                 : 1
+ 4-bit comparator greatequal                           : 1
+ 6-bit comparator equal                                : 1
+ 6-bit comparator greatequal                           : 3
+ 6-bit comparator greater                              : 1
+ 6-bit comparator less                                 : 1
+ 6-bit comparator lessequal                            : 4
+ 7-bit comparator equal                                : 1
+ 7-bit comparator greatequal                           : 7
+ 7-bit comparator greater                              : 4
+ 7-bit comparator less                                 : 8
+ 7-bit comparator lessequal                            : 3
+ 8-bit comparator greatequal                           : 1
+ 8-bit comparator lessequal                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <seven_seg_0> has a constant value of 1 in block <game_title>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <seven_seg_2> has a constant value of 0 in block <game_title>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <seven_seg_6> has a constant value of 0 in block <game_title>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <seven_seg_7> has a constant value of 0 in block <game_title>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2676 - LOC constraint P16 of signal <ld> is already used by <>, it will be ignored
+
+Optimizing unit <pong_top> ...
+
+Optimizing unit <game_title> ...
+
+Optimizing unit <vga_int> ...
+
+Optimizing unit <vgacore> ...
+
+Optimizing unit <PS2_CTRL> ...
+
+Optimizing unit <cntrl> ...
+
+Optimizing unit <read_ps2> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block pong_top, actual ratio is 3.
+
+Final Macro Processing ...
+
+Processing Unit <pong_top> :
+	Found 3-bit shift register for signal <vga_inst/HSYNCH_OUT>.
+	Found 2-bit shift register for signal <vga_inst/VSYNCH_OUT>.
+Unit <pong_top> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 189
+ Flip-Flops                                            : 189
+# Shift Registers                                      : 2
+ 2-bit shift register                                  : 1
+ 3-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : pong_top.ngr
+Top Level Output File Name         : pong_top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 29
+
+Cell Usage :
+# BELS                             : 627
+#      GND                         : 1
+#      INV                         : 13
+#      LUT1                        : 27
+#      LUT2                        : 106
+#      LUT2_D                      : 4
+#      LUT2_L                      : 4
+#      LUT3                        : 89
+#      LUT3_D                      : 5
+#      LUT3_L                      : 9
+#      LUT4                        : 177
+#      LUT4_D                      : 16
+#      LUT4_L                      : 27
+#      MUXCY                       : 99
+#      MUXF5                       : 19
+#      VCC                         : 1
+#      XORCY                       : 30
+# FlipFlops/Latches                : 191
+#      FD                          : 23
+#      FDC                         : 52
+#      FDCE                        : 59
+#      FDE                         : 30
+#      FDP                         : 11
+#      FDPE                        : 9
+#      FDR                         : 3
+#      FDRS                        : 1
+#      FDS                         : 3
+# Shift Registers                  : 2
+#      SRL16                       : 2
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 28
+#      IBUF                        : 3
+#      OBUF                        : 25
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1200eft256-4 
+
+ Number of Slices:                      249  out of   8672     2%  
+ Number of Slice Flip Flops:            191  out of  17344     1%  
+ Number of 4 input LUTs:                479  out of  17344     2%  
+    Number used as logic:               477
+    Number used as Shift registers:       2
+ Number of IOs:                          29
+ Number of bonded IOBs:                  29  out of    190    15%  
+ Number of GCLKs:                         3  out of     24    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk_ic4                            | BUFGP                  | 109   |
+cntrl_inst/VGA1/VCLK1              | BUFG                   | 31    |
+cntrl_inst/VCLK1                   | BUFG                   | 53    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+--------------------------------------------------------------------------------+---------------------------------+-------+
+Control Signal                                                                  | Buffer(FF name)                 | Load  |
+--------------------------------------------------------------------------------+---------------------------------+-------+
+btn3                                                                            | IBUF                            | 111   |
+cntrl_inst/VGA1/COUNTER_RESET(cntrl_inst/VGA1/COUNTER_RESET:Q)                  | NONE(cntrl_inst/VGA1/HCOUNTER_0)| 10    |
+cntrl_inst/VGA1/VERTICAL_COUNTER_RESET(cntrl_inst/VGA1/VERTICAL_COUNTER_RESET:Q)| NONE(cntrl_inst/VGA1/VCOUNTER_0)| 10    |
+--------------------------------------------------------------------------------+---------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 9.112ns (Maximum Frequency: 109.745MHz)
+   Minimum input arrival time before clock: 5.687ns
+   Maximum output required time after clock: 4.914ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_ic4'
+  Clock period: 7.811ns (frequency: 128.025MHz)
+  Total number of paths / destination ports: 895 / 152
+-------------------------------------------------------------------------
+Delay:               7.811ns (Levels of Logic = 7)
+  Source:            cntrl_inst/number_address_3 (FF)
+  Destination:       cntrl_inst/COLOR_0 (FF)
+  Source Clock:      clk_ic4 rising
+  Destination Clock: clk_ic4 rising
+
+  Data Path: cntrl_inst/number_address_3 to cntrl_inst/COLOR_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              12   0.591   0.965  cntrl_inst/number_address_3 (cntrl_inst/number_address_3)
+     LUT4:I3->O            1   0.704   0.455  cntrl_inst/CGEN1/Mrom_data_rom0000141 (cntrl_inst/CGEN1/Mrom_data_rom000014)
+     LUT3:I2->O            2   0.704   0.451  cntrl_inst/CGEN1/Mrom_data_rom0000161_6 (cntrl_inst/CGEN1/Mrom_data_rom0000101_6)
+     LUT4:I3->O            1   0.704   0.000  cntrl_inst/next_COLOR<0>1122_G (N135)
+     MUXF5:I1->O           1   0.321   0.455  cntrl_inst/next_COLOR<0>1122 (cntrl_inst/next_COLOR<0>1122)
+     LUT3_D:I2->O          1   0.704   0.424  cntrl_inst/next_COLOR<0>1123 (cntrl_inst/N111)
+     LUT4:I3->O            1   0.704   0.000  cntrl_inst/next_COLOR<0>_F (N172)
+     MUXF5:I0->O           1   0.321   0.000  cntrl_inst/next_COLOR<0> (cntrl_inst/next_COLOR<0>)
+     FDR:D                     0.308          cntrl_inst/COLOR_0
+    ----------------------------------------
+    Total                      7.811ns (5.061ns logic, 2.750ns route)
+                                       (64.8% logic, 35.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'cntrl_inst/VGA1/VCLK1'
+  Clock period: 7.312ns (frequency: 136.761MHz)
+  Total number of paths / destination ports: 262 / 37
+-------------------------------------------------------------------------
+Delay:               7.312ns (Levels of Logic = 6)
+  Source:            cntrl_inst/VGA1/VCOUNTER_9 (FF)
+  Destination:       cntrl_inst/VGA1/VERTICAL_COUNTER_RESET (FF)
+  Source Clock:      cntrl_inst/VGA1/VCLK1 rising
+  Destination Clock: cntrl_inst/VGA1/VCLK1 rising
+
+  Data Path: cntrl_inst/VGA1/VCOUNTER_9 to cntrl_inst/VGA1/VERTICAL_COUNTER_RESET
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.591   0.706  cntrl_inst/VGA1/VCOUNTER_9 (cntrl_inst/VGA1/VCOUNTER_9)
+     LUT3:I0->O            1   0.704   0.424  cntrl_inst/VGA1/Vertical_State_cmp_eq00001_SW0 (N45)
+     LUT4_D:I3->LO         1   0.704   0.135  cntrl_inst/VGA1/Vertical_State_cmp_eq00001 (N201)
+     LUT3:I2->O            7   0.704   0.883  cntrl_inst/VGA1/Vertical_State_cmp_eq000021 (cntrl_inst/VGA1/N4)
+     LUT4:I0->O            1   0.704   0.000  cntrl_inst/VGA1/VERTICAL_COUNTER_RESET_mux000135_F (N184)
+     MUXF5:I0->O           1   0.321   0.424  cntrl_inst/VGA1/VERTICAL_COUNTER_RESET_mux000135 (cntrl_inst/VGA1/VERTICAL_COUNTER_RESET_mux000135)
+     LUT4:I3->O            1   0.704   0.000  cntrl_inst/VGA1/VERTICAL_COUNTER_RESET_mux000193 (cntrl_inst/VGA1/VERTICAL_COUNTER_RESET_mux0001)
+     FDP:D                     0.308          cntrl_inst/VGA1/VERTICAL_COUNTER_RESET
+    ----------------------------------------
+    Total                      7.312ns (4.740ns logic, 2.572ns route)
+                                       (64.8% logic, 35.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'cntrl_inst/VCLK1'
+  Clock period: 9.112ns (frequency: 109.745MHz)
+  Total number of paths / destination ports: 3121 / 91
+-------------------------------------------------------------------------
+Delay:               9.112ns (Levels of Logic = 7)
+  Source:            cntrl_inst/left_y_1 (FF)
+  Destination:       cntrl_inst/ball_ydir (FF)
+  Source Clock:      cntrl_inst/VCLK1 rising
+  Destination Clock: cntrl_inst/VCLK1 rising
+
+  Data Path: cntrl_inst/left_y_1 to cntrl_inst/ball_ydir
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             10   0.591   1.057  cntrl_inst/left_y_1 (cntrl_inst/left_y_1)
+     LUT4:I0->O            1   0.704   0.499  cntrl_inst/_add0004<4>1 (cntrl_inst/_add0004<4>)
+     LUT2:I1->O            1   0.704   0.000  cntrl_inst/Mcompar_ball_xdir_cmp_ge0003_lut<4> (cntrl_inst/Mcompar_ball_xdir_cmp_ge0003_lut<4>)
+     MUXCY:S->O            1   0.464   0.000  cntrl_inst/Mcompar_ball_xdir_cmp_ge0003_cy<4> (cntrl_inst/Mcompar_ball_xdir_cmp_ge0003_cy<4>)
+     MUXCY:CI->O           5   0.459   0.637  cntrl_inst/Mcompar_ball_xdir_cmp_ge0003_cy<5> (cntrl_inst/ball_xdir_cmp_ge0003)
+     LUT4:I3->O            1   0.704   0.455  cntrl_inst/ball_ydir_and000032_SW0 (N102)
+     LUT4:I2->O            1   0.704   0.455  cntrl_inst/ball_ydir_and000088_SW0 (N77)
+     LUT4:I2->O            1   0.704   0.420  cntrl_inst/ball_ydir_and0000119 (cntrl_inst/ball_ydir_and0000)
+     FDE:CE                    0.555          cntrl_inst/ball_ydir
+    ----------------------------------------
+    Total                      9.112ns (5.589ns logic, 3.523ns route)
+                                       (61.3% logic, 38.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_ic4'
+  Total number of paths / destination ports: 26 / 26
+-------------------------------------------------------------------------
+Offset:              4.766ns (Levels of Logic = 2)
+  Source:            btn3 (PAD)
+  Destination:       cntrl_inst/VGA1/PIXEL_0 (FF)
+  Destination Clock: clk_ic4 rising
+
+  Data Path: btn3 to cntrl_inst/VGA1/PIXEL_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           116   1.218   1.289  btn3_IBUF (btn3_IBUF)
+     INV:I->O             14   0.704   1.000  read_ps2_inst/ps2_ctrl/Reset_inv1_INV_0 (cntrl_inst/VGA1/RESET_inv)
+     FDE:CE                    0.555          cntrl_inst/VGA1/PIXEL_0
+    ----------------------------------------
+    Total                      4.766ns (2.477ns logic, 2.289ns route)
+                                       (52.0% logic, 48.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'cntrl_inst/VGA1/VCLK1'
+  Total number of paths / destination ports: 12 / 12
+-------------------------------------------------------------------------
+Offset:              4.766ns (Levels of Logic = 2)
+  Source:            btn3 (PAD)
+  Destination:       cntrl_inst/VGA1/LINE_0 (FF)
+  Destination Clock: cntrl_inst/VGA1/VCLK1 rising
+
+  Data Path: btn3 to cntrl_inst/VGA1/LINE_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           116   1.218   1.289  btn3_IBUF (btn3_IBUF)
+     INV:I->O             14   0.704   1.000  read_ps2_inst/ps2_ctrl/Reset_inv1_INV_0 (cntrl_inst/VGA1/RESET_inv)
+     FDE:CE                    0.555          cntrl_inst/VGA1/LINE_0
+    ----------------------------------------
+    Total                      4.766ns (2.477ns logic, 2.289ns route)
+                                       (52.0% logic, 48.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'cntrl_inst/VCLK1'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              5.687ns (Levels of Logic = 3)
+  Source:            btn3 (PAD)
+  Destination:       cntrl_inst/ball_ydir (FF)
+  Destination Clock: cntrl_inst/VCLK1 rising
+
+  Data Path: btn3 to cntrl_inst/ball_ydir
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           116   1.218   1.464  btn3_IBUF (btn3_IBUF)
+     LUT2:I0->O            2   0.704   0.622  cntrl_inst/ball_xdir_and000039 (cntrl_inst/ball_xdir_and000039)
+     LUT4:I0->O            1   0.704   0.420  cntrl_inst/ball_ydir_and0000119 (cntrl_inst/ball_ydir_and0000)
+     FDE:CE                    0.555          cntrl_inst/ball_ydir
+    ----------------------------------------
+    Total                      5.687ns (3.181ns logic, 2.506ns route)
+                                       (55.9% logic, 44.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_ic4'
+  Total number of paths / destination ports: 21 / 21
+-------------------------------------------------------------------------
+Offset:              4.914ns (Levels of Logic = 1)
+  Source:            read_ps2_inst/ps2_ctrl/Scan_Code_1 (FF)
+  Destination:       ld<1> (PAD)
+  Source Clock:      clk_ic4 rising
+
+  Data Path: read_ps2_inst/ps2_ctrl/Scan_Code_1 to ld<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            17   0.591   1.051  read_ps2_inst/ps2_ctrl/Scan_Code_1 (read_ps2_inst/ps2_ctrl/Scan_Code_1)
+     OBUF:I->O                 3.272          ld_1_OBUF (ld<1>)
+    ----------------------------------------
+    Total                      4.914ns (3.863ns logic, 1.051ns route)
+                                       (78.6% logic, 21.4% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.69 secs
+ 
+--> 
+
+Total memory usage is 322304 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   20 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+
